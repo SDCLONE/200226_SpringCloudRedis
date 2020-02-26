@@ -11,5 +11,9 @@
     <select id="getDataById" resultMap="dataMap">
         select * from data where ID=#{ID}
     </select>
-
+    <update id="updateData">
+        update data
+        set Temperature=#{Temperature},Humidity=#{Humidity},Voice_in=#{Voice_in}
+        where ID=#{ID}
+    </update>
 </mapper>

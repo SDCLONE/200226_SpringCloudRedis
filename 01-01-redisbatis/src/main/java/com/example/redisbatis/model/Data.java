@@ -19,4 +19,14 @@ public class Data implements Serializable{
         Humidity = humidity;
         Voice_in = voice_in;
     }
+
+    @Override
+    public String toString() {
+        return "Data{" +
+                "ID=" + ID +
+                ", Temperature=" + Temperature +
+                ", Humidity=" + Humidity +
+                ", Voice_in=" + Voice_in +
+                '}';
+    }
 }
