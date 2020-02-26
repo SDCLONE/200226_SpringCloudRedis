@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.redisbatis.dao.DataMapper">
+    <resultMap id="dataMap" type="com.example.redisbatis.model.Data">
+        <id column="ID" property="ID"/>
+        <result column="Temperature" property="Temperature"/>
+        <result column="Humidity" property="Humidity"/>
+        <result column="Voice_in" property="Voice_in"/>
+    </resultMap>
+
+    <select id="getDataById" resultMap="dataMap">
+        select * from data where ID=#{ID}
+    </select>
+
+</mapper>
