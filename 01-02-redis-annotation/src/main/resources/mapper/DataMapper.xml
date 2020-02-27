@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.example.redisbatis.dao.DataMapper">
-    <resultMap id="dataMap" type="com.example.redisbatis.model.Data">
+<mapper namespace="com.example.redisannotation.dao.DataMapper">
+    <resultMap id="dataMap" type="com.example.redisannotation.model.Data">
         <id column="ID" property="ID"/>
         <result column="Temperature" property="Temperature"/>
         <result column="Humidity" property="Humidity"/>

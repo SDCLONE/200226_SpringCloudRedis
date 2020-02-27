@@ -1,7 +1,7 @@
-package com.example.redisbatis.dao;
+package com.example.redisannotation.dao;
 
-import com.example.redisbatis.model.Data;
 
+import com.example.redisannotation.model.Data;
 
 public interface DataMapper {
     Data getDataById(int ID);

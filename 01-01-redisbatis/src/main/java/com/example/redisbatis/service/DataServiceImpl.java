@@ -57,4 +57,12 @@ public class DataServiceImpl implements DataService {
         redisTemplate.delete("ID_"+data.getID());
 
     }
+
+    @Override
+    public void deleteData(int ID) {
+        dataMapper.deleteData(ID);
+        //删除时删除对应缓存
+        System.out.println("删除缓存数据:"+"ID_"+ID);
+        redisTemplate.delete("ID_"+ID);
+    }
 }
