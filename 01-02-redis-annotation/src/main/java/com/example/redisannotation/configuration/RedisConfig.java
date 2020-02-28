@@ -1,8 +1,12 @@
 package com.example.redisannotation.configuration;
 
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.cache.Cache;
 import org.springframework.cache.CacheManager;
 import org.springframework.cache.annotation.EnableCaching;
+import org.springframework.cache.interceptor.CacheErrorHandler;
 import org.springframework.cache.interceptor.KeyGenerator;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -20,9 +24,15 @@ import java.io.Serializable;
 import java.lang.reflect.Method;
 import java.time.Duration;
 
+/*
+ * 这个类用来设置缓存的基本配置
+ *
+ */
 @Configuration
 @EnableCaching      //使用这个来用注解使用缓存
 public class RedisConfig {
+
+
     /*
     用来配置redisTemplate
     必须使用connectionFactory
@@ -70,4 +80,6 @@ public class RedisConfig {
             }
         };
     }
+
+
 }
